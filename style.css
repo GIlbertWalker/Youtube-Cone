@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url(/sidenav.css);
+@import url(/topnav.css);
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.main {
+    margin-left:var(--nav-width);/* Same as the width of the sidenav */
+    margin-top: var(--nav-height);
+    display: flex;
+    float: left;
+}
+/* Thumbnails Styles */
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+  
+  .row {
+    margin: 0;
+  }
+  
+  .column {
+    float: right;
+    width: 23%;
+    margin: 10px;
+    vertical-align: middle;
+  }
+.column >div img{
+    width:100%;
+    border-radius: 15px 15px;
+}
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .content {
+    font-family: "Roboto","Arial",sans-serif!important;
+    background-color: white;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media only screen and (max-width: 1000px) {
+    .column{
+      width: 45%;
+      margin: 15px 0;
+      padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .column{
+      width: 100%;
+    }
+}
+
+
+#content-container{
+    display: flex;
+    gap: 0.2rem;
+    padding-bottom: 10px;
+}
+
+#content-container img{
+    /* padding-top: 5px; */
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit:cover;
+}
+#content-container svg{
+    fill: rgb(5, 5, 5);
+    height: 30px;
+    align-content: flex-end;
+}
+#content-container>div{
+   display:flex;
+   position: absolute;
+}
+.content span{
+    opacity: 0.6;
+    font-family: Verdana,sans-serif !important;
+    margin: 0 0 2rem 2rem;
+    line-height: 1;
+    padding-left: 0.8rem;
+    font-size: smaller;
+}
+
+.content p{
+    font-size:1.2vw;
+    margin: 1px 0px 0px 0px;
+    width: auto;
+    word-wrap: wrap;
+    padding-left: 0.8rem;
+}

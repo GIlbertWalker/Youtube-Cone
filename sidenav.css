@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+*{
+    --nav-color:#ffffff;
+    --nav-width:4.5rem;
+    --grass-color:rgba(255, 255, 255, 0.1); 
+}
+  
+  /* SIDE BAR STYLES */
+
+nav{
+    color: #060606;
+}
+#sidenav{
+height: 100vh;
+width: var(--nav-width);
+position: fixed;
+top: var(--nav-height);
+overflow: hidden;
+z-index: 1;
+left: 0;
+background-color:var(--nav-color);
+}
+#sidenav >div{
+    display: grid;
+    display: grid;
+    height: var(--nav-width);
+    place-content: cneter;
+    justify-content: center;
+}
+#sidenav >div:hover{
+    background-color: var(--grass-color);
+}
+#sidenav>div svg{
+    fill: #0a0a0a;
+    height: calc(var(--na-width)/2.5rem);
+}
+
+#sidenav>div span{
+    font-size: 0.6rem;
+}
+
+@media screen and (max-height: 450px) {
+#sidenav {padding-top: 15px;}
+#sidenav div {font-size: 18px;}
+}
+
+
+/* TOPNAV BAR */
